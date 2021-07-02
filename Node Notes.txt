@@ -6,3 +6,4 @@ npm start -> starts the server
 npm install mongoose -> installs mongo package
 npm install dotenv -> Server security
 npm install body-parser -> body parser to see what we are sending
+npm install cors -> to see data of my localhost
