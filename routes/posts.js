@@ -1,12 +1,13 @@
 
 //Express calling
+const verify = require('../routes/verifytoken')
 const express = require('express')
 //Router calling
 const router = express.Router()
 //Post model calling
-const Post = require('./models/Post')
+const Post = require('../models/Post')
 //Gets all the posts
-router.get('/', async (req, res) => {
+router.get('/', verify, async (req, res) => {
     try {
         const posts = await Post.find()
         res.json(posts)

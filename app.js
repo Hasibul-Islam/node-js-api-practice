@@ -8,8 +8,10 @@ app.use(bodyParser.json())
 const mongoose = require('mongoose',{ useUnifiedTopology: true })
 
 const postRoute = require('./routes/posts')
+const postUsersRoute = require('./routes/users')
 //Middlewares
 app.use('/posts',postRoute)
+app.use('/account',postUsersRoute)
 app.use(cors())
 
 
